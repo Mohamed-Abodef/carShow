@@ -1,0 +1,236 @@
+*{
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+main {
+  padding: 10px;
+}
+.hero__title {
+  font-size: 50px;
+}
+.exploreCarsButton {
+  width: 120px;
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.hero__text-container {
+  width: 50%;
+  height: 400px;
+}
+.hero__image-container {
+  width: 50%;
+  height: 400px !important;
+  position: relative;
+}
+@media (max-width: 800px) {
+  .hero__text-container,
+  .hero__image-container {
+    width: 100% !important;
+  }
+}
+@media (max-width: 420px) {
+  .hero__title {
+    font-size: 51px;
+  }
+  .hero__image-container {
+    height: 200px;
+  }
+}
+nav {
+  position: relative;
+  border-bottom: 2px solid #eee;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 50px 0px 0px;
+}
+.signInButton {
+  color: #7e7c7c;
+  text-decoration: none;
+  padding: 0px 10px;
+}
+.Footer {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  padding: 20px; 
+  border-top :1px solid #eee;
+}
+.Footer div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.Footer div p{
+  color: gray;
+}
+.Footer .Link {
+  color: gray;
+  padding: 10px 0px;
+  text-decoration: none;
+}
+.Footer .Link:visited {
+  color: gray;
+}
+.SearchManufectureBar{
+  border-radius: 5px;
+  border: none;
+  background-color: #eee;
+  width: 100%;
+  height: 100%;
+
+}
+.SearchManufectureBar:focus{
+  outline: none;
+}
+.ManufectureSuggest{
+  border: 1px solid #eee;
+  position: absolute;
+  margin: 0px;
+  top: 20px;
+  width: 200px;
+  border-radius: 5px;
+  background-color: white;
+  z-index: 10;
+}
+.ManufectureSuggest p{
+  padding: 9px 0px;
+  margin: 0px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+.ManufectureSuggest p:hover{
+  background-color: blue;
+  color: white;
+}
+.carCard{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+  background-color: #99ccffa7;
+  width:calc((100% - 25px) /4);
+  border-radius: 25px;
+  transition: .3s;
+}
+@media (max-width: 1100px) {
+.carCard{
+  width:30%;
+}
+}
+@media (max-width: 800px) {
+.carCard{
+  width: 100%;
+}
+}
+
+  .hero__image-container {
+    height: 200px;
+  }
+.carCard:hover {
+  background-color: white;
+  box-shadow: 2px 5px 9px #eee;
+
+}
+.carCard h2,.carCard span{
+  margin: 0px;
+}
+.carCard h2{
+  width: 100%;
+}
+.carCard span{
+  color: #717171;
+}
+.carCard:hover .option{
+display: none !important;
+}
+.carCard .exploreCarsButton{
+  width: 100%;
+  display: none;
+}
+.carCard:hover .exploreCarsButton{
+  display: flex;
+  justify-content: center;
+}
+.overLay{
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.221);
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: overLay;
+  animation-duration: .3s;
+  animation-fill-mode: forwards;
+}
+@keyframes overLay {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 100%;
+  }
+}
+.overLay .carInfo {
+  background-color: white;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  inset: 0;
+  position: relative;
+  min-height: 30px;
+  border-radius: 25px;
+  z-index: 101;
+  padding: 20px;
+}
+@media (max-width: 420px) {
+  .carInfo{
+    width: 90% !important;
+  }
+}
+.carInfo .x {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -3px;
+  top: -5px;
+  padding: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white ;
+  border: 1px solid #eee;
+  cursor: pointer;
+  transition: .3s linear;
+}
+.carInfo .x:hover {
+  background-color: red;
+  color:white ;
+}
+.carInfo .mainPic{
+  
+  width: 80%;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.carInfo  .data{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 5px 0px;
+  border-bottom: 1px solid #eee;
+}
